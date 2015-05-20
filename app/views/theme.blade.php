@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
 
@@ -19,31 +19,13 @@
 		                    <div id="gallery" class="gallery">
 
 		                    @if ( !empty($projets) )
-								@foreach($projets as $projet) 
-			                    
-		                        <!-- gallery item -->
-		                        <div class="span3 item {{ $custom->makeSlug( $custom->if_exist($subthemes[$projet['subtheme_id']])) }}">
-		                            <div class="picframe">
-		                                <span class="overlay">
-		                                    <span class="info-area">	                                    	
-		                                       <a class="img-icon-zoom" href="{{ url('schemas/projet/schema/'.$projet['id']) }}" title=""></a>		                                       
-		                                    </span>
-		                                </span>
-										<span class="itemColor" style="background:{{ $couleur }};">
-											@if($projet['type'] == 'app')										
-												<img src="{{ asset('images/pf2.png') }}" data-original="{{ asset('images/pf2.png') }}" alt="" /></span>
-												<h4>{{ link_to('schemas/projet/schema/'.$projet['id'], $projet['titre'] ) }}</h4>										
-											@else										
-												<img src="{{ asset('images/pf3.png') }}" data-original="{{ asset('images/pf3.png') }}" alt="" /></span>	
-												<h4>{{ link_to('schemas/projet/schema/'.$projet['id'], $projet['titre']) }}</h4>                                      
-		                                    @endif 
-				                        <div class="auteur">{{ $projet['user']['prenom'] }} {{ $projet['user']['nom'] }}</div>
-				                        <div class="description">{{ $custom->limit_words($projet['description'], 15) }}</div>
-		                            </div>
-		                        </div>
-		                        <!-- close gallery item -->
-		                        
-								@endforeach
+
+                                <?php
+                                    echo '<pre>';
+                                    print_r($projets);
+                                    echo '</pre>';
+                                ?>
+
 							@endif 
 							
 		                    </div>

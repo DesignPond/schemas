@@ -105,24 +105,18 @@ body {
     }
 
 
-#wrapper{
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -108px; 
-}
-
-#wrapper:after {
-  content: "";
-  display: block;
-}
-#wrapper:after {
-  /* .push must be the same height as footer */
-  height: 20px;
-}
 
 .hometext p{
 	font-size: 16px;
 	margin-bottom: 20px;
+    text-align: justify;
+}
+
+.sticky-footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 /* -------------------------------------------------- */
@@ -1056,9 +1050,6 @@ a.Txt{
 /* -------------------------------------------------- */
 /* footer */
 /* -------------------------------------------------- */
-footer {
-	height: 60px;
-}
 
     footer h3 {
         font-size: 20px;
@@ -1076,13 +1067,17 @@ footer {
             color: #a9a9a9;
         }
 
-
+.logossites{
+    border-top: 1px solid #ededed;
+    background: #fcfcfc;
+    padding:10px;
+}
 /* -------------------------------------------------- */
 /* subfooter */
 /* -------------------------------------------------- */
 .subfooter {
     border-top: solid 1px #ddd;
-    margin: 40px 0 -40px 0;
+    margin: 0;
     background: #06274a;
     padding: 20px 0 20px 0;
     font-size: 12px;

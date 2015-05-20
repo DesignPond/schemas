@@ -21,7 +21,7 @@
     
     <!-- Javascript Files
     ================================================== -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="<?php echo asset('js/jquery-1.11.3.min.js');?>"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <script src="<?php echo asset('js/bootstrap.min.js');?>"></script>
@@ -36,7 +36,7 @@
     <script src="<?php echo asset('js/toggles.js');?>"></script>
     <script src="<?php echo asset('js/jquery.rateit.min.js');?>"></script>
     <script src="<?php echo asset('js/script.js');?>"></script>
-    
+    <script src="<?php echo asset('js/jquery.stickyfooter.min.js');?>"></script>
     <!-- add -->
 
     <link rel="stylesheet" href="<?php echo asset('css/jquery.tagit.css'); ?>">
@@ -130,42 +130,41 @@
 	        @yield('content')
 	        
 	        <!--  content close -->  
-	        
-	            
-		    <div style="display: none;">
-			    <hr/>
-			    <div class="container" style="background:#ccc;padding:0 10px 15px 10px;">
-				   
-				    <div class="row marge-top">
 
-				         <div class="span2">
-					         <a target="_blank" href="http://publications-droit.ch"><img src="<?php echo asset('images/sites/pubdroit.png'); ?>" alt="pubdroit" /></a>
-				         </div>
-				         <div class="span2">
-					         <a target="_blank" href="http://droitmatrimonial.ch/"><img src="<?php echo asset('images/sites/matrimonial.png'); ?>" alt="matrimonial" /></a>
-				         </div>
-				         <div class="span2">
-					         <a target="_blank" href="http://bail.ch/"><img src="<?php echo asset('images/sites/bail.png'); ?>" alt="bail" /></a>
-				         </div>
-				         <div class="span2">
-					         <a target="_blank" href="http://droitpraticien.ch"><img src="<?php echo asset('images/sites/droitpraticien.png'); ?>" alt="droitpraticien" /></a>
-				         </div>
-				         <div class="span2">
-					         <a target="_blank" href="http://tribunauxcivils.ch"><img src="<?php echo asset('images/sites/tribunaux.png'); ?>" alt="tribunaux" /></a>
-				         </div>
-				         <div class="span2">
-					         <a target="_blank" href="http://droitdutravail.ch"><img src="<?php echo asset('images/sites/droittravail.png'); ?>" alt="droitdutravail" /></a>
-				         </div>
-					</div> 
-			    </div>
-			    
-		    </div>   
-            
 		</div>
 		<!--  wrapper close -->
             
         <!-- footer begin -->
-        <footer>
+        <?php $idfooter = (!Request::is('book/*') ? 'footer' : ''); ?>
+
+            <footer id="{{ $idfooter }}">
+
+            <div class="logossites">
+                <div class="container">
+                    <div class="row">
+                        <div class="span2">
+                            <a target="_blank" href="http://publications-droit.ch"><img src="<?php echo asset('images/sites/pubdroit.png'); ?>" alt="pubdroit" /></a>
+                        </div>
+                        <div class="span2">
+                            <a target="_blank" href="http://droitmatrimonial.ch/"><img src="<?php echo asset('images/sites/matrimonial.png'); ?>" alt="matrimonial" /></a>
+                        </div>
+                        <div class="span2">
+                            <a target="_blank" href="http://bail.ch/"><img src="<?php echo asset('images/sites/bail.png'); ?>" alt="bail" /></a>
+                        </div>
+                        <div class="span2">
+                            <a target="_blank" href="http://droitpraticien.ch"><img src="<?php echo asset('images/sites/droitpraticien.png'); ?>" alt="droitpraticien" /></a>
+                        </div>
+                        <div class="span2">
+                            <a target="_blank" href="http://tribunauxcivils.ch"><img src="<?php echo asset('images/sites/tribunaux.png'); ?>" alt="tribunaux" /></a>
+                        </div>
+                        <div class="span2">
+                            <a target="_blank" href="http://droitdutravail.ch"><img src="<?php echo asset('images/sites/droittravail.png'); ?>" alt="droitdutravail" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="subfooter">
                 <div class="container">
                     <div class="row">

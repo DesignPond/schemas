@@ -11,12 +11,12 @@
 	<div class="container marge-top">
         <div class="row marge-top">
             <div class="span8 hometext">
-	            <h3>Le site Droit en schémas</h3>
-				<p>Complément indispensable de l'ouvrage <strong>"La procédure civile en schémas"</strong>, ce site reprend l’ensemble des schémas du livre ainsi que d'autre schémas additionels.
-				Les graphiques couvrent les matières traitées par le Code, en décrivant les processus formels et en tentant de conceptualiser les notions essentielles.</p>  
-
-				<p>Un soin particulier a été mis dans la réalisation des schémas, déclinés en douze couleurs et dégradés afin d’en faciliter la lecture et la compréhension.</p> 
-            	            	
+                <h3>Le site Droit en schémas</h3>
+                <img style="float: left; margin:0 20px 20px 0;" src="<?php echo asset('images/procedure_civile_schemas_soft.png'); ?>" alt="procédure civile en schémas">
+                <p>&nbsp;</p>
+				<p>Complément indispensable de l'ouvrage <strong>"La procédure civile en schémas"</strong>, ce site reprend l’ensemble des schémas du livre ainsi que d'autre schémas additionels.</p>
+                <p>Les graphiques couvrent les matières traitées par le Code, en décrivant les processus formels et en tentant de conceptualiser les notions essentielles.</p>
+				<p>Un soin particulier a été mis dans la réalisation des schémas, déclinés en douze couleurs et dégradés afin d’en faciliter la lecture et la compréhension.</p>
             </div>
             <div class="span4 login-frontpage">
             
