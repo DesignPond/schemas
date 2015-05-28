@@ -72,10 +72,11 @@ class ThemeController extends BaseController {
 	{
 		$projets  = $this->projet->projectsByTheme($id);
 		//$subtheme = $this->theme->subthemes($id);
-		$titre    = $this->theme->find($id)->first();
+		$titre    = $this->theme->find($id);
+		
 		$data = array(
         	'titre'     => 'Thème',
-			'soustitre' => '',
+			'soustitre' => $titre->titre,
 			'couleur'   => $titre->couleur,
 			'projets'   => $projets ,
 			'subthemes' => ''

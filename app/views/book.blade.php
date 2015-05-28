@@ -19,8 +19,8 @@
                                 </div>
                             </div>
                             <div class="post-meta no-space-left">
-                                <span><a href="{{ url('categorie') }}"><i class="icon-tag"></i> {{ $projet['theme']['titre'] }}</a></span>
-                                <span><a href="{{ url('categorie') }}"><i class="icon-tag"></i> {{ $projet['subtheme']['titre'] }}</a></span>
+                                <span><a href="{{ url('categorie#theme_'.$projet['theme']['id']) }}"><i class="icon-tag"></i> {{ $projet['theme']['titre'] }}</a></span>
+                                <span><a href="{{ url('categorie#theme_'.$projet['theme']['id']) }}"><i class="icon-tag"></i> {{ $projet['subtheme']['titre'] }}</a></span>
                             </div>
                             <div class="text-center">
                                     <?php

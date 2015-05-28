@@ -37,6 +37,7 @@
     <script src="<?php echo asset('js/jquery.rateit.min.js');?>"></script>
     <script src="<?php echo asset('js/script.js');?>"></script>
     <script src="<?php echo asset('js/jquery.stickyfooter.min.js');?>"></script>
+    <script src="<?php echo asset('js/scroll/smooth-scroll.js');?>"></script>
     <!-- add -->
 
     <link rel="stylesheet" href="<?php echo asset('css/jquery.tagit.css'); ?>">
@@ -62,7 +63,7 @@
     	<div id="wrapper">
         	
 	        <!-- header begin -->
-	        <header>
+	        <header data-scroll-header>
 	            <div class="info">
 	                <div class="container">
 	                    <div class="row">
@@ -187,6 +188,13 @@
                 </div>
             </div>
         </footer>
+        <script>
+
+            $(function() {
+               // smoothScroll.init({  offset: 350  });
+            });
+
+        </script>
         <!-- footer close -->
 	</body>
 </html>

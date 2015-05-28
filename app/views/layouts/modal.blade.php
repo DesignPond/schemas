@@ -12,7 +12,7 @@
     ================================================== -->
     <link rel="stylesheet" href="<?php echo asset('css/main.css');?>" type="text/css" id="main-css">
     <link rel="stylesheet" href="<?php echo asset('css/smoothness/jquery-ui-1.10.3.custom.css'); ?>" type="text/css" media="screen" />
-    
+    <script src="<?php echo asset('js/jquery.stickyfooter.min.js');?>"></script>
     <!-- Javascript Files
     ================================================== -->
    	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

@@ -373,14 +373,7 @@ define(["jquery", "backbone","views/boxView" ,"models/box","models/boxCollection
 	
 				$('#content-application').css('height', big+h+60 );
 
-                $("#footer").stickyFooter({
-                    // The class that is added to the footer.
-                    class: 'sticky-footer',
-                    // The footer will stick to the bottom of the given frame. The parent of the footer is used when an empty string is given.
-                    frame: '',
-                    // The content of the frame. You can use multiple selectors. e.g. "#header, #body"
-                    content: '#wrapper, #content'
-                });
+    
 
 				// Show the div when all is loaded
 				$("#menuButtons").fadeIn(400);

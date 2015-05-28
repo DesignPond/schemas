@@ -17,25 +17,23 @@
 						<?php 
 							$i      = 1;
 							$themes = $categorie->theme->toArray();
-							$nbr    = count($themes); 
-/*
-                         echo '<pre>';
-                          print_r($liste);
-                          echo '</pre>';*/
+							$nbr    = count($themes);
 						?>
 
 							@foreach($themes as $theme)
 							<ul class="categoriesList clearfix">
 
 								<li class="principal">
-									<a style="background:<?php echo $theme['couleur_primaire']; ?>;" href=""><span><?php echo $theme['titre']; ?></span>
+									<a style="background:<?php echo $theme['couleur_primaire']; ?>;" href="">
+                                        <span><?php echo $theme['titre']; ?></span>
 									    <i style="border-color: transparent transparent transparent <?php echo $theme['couleur_primaire']; ?>;" class="triangle_droite"></i>
 									</a>
 									<?php if($i < $nbr){  ?>
 										<i style="border-color: <?php echo $theme['couleur_primaire']; ?> transparent transparent transparent;" class="triangle_bottom"></i>
 									<?php } ?>
+                                    <span class="anchor" id="theme_{{ $theme['id'] }}"></span>
 								</li>
-								@if ( isset($subthemes[$theme['id']]) )
+								@if (isset($subthemes[$theme['id']]) )
 								
 									@foreach($subthemes[$theme['id']] as $subtheme)
 										<li>
